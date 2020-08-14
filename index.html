@@ -430,22 +430,23 @@
         <div id="success"></div>
         <button type="submit" class="btn btn-default">Send Message</button>
       </form>
-        <form>
-    ชื่อ: <input type="text" name="name" id="name"/><br>
-    อีเมลล์: <input type="text" name="email" id="email" /><br>
-    ข้อความ:  <input type="text" name="message" id="message" /><br>
-    <input type="submit" value="send" onclick="sendMail()" />
-    <input type="reset" value="reset">
-</form>
+       <form
+  action="https://formspree.io/xrgydjbb"
+  method="POST"
+>
+  <label>
+    Your email:
+    <input type="text" name="_replyto">
+  </label>
+  <label>
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
 
-<script>
-    const sendMail = () => {
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
-        window.open(`mailto:narudon1412@gmail.com?subject=เมลล์จากคุณ${name+' '+email}&body=${message}`);
-    }
-</script>
+  <!-- your other form fields go here -->
+
+  <button type="submit">Send</button>
+</form>
       <div class="social">
         <ul>
           <li><a href="#"><i class="fa fa-facebook"></i></a></li>
